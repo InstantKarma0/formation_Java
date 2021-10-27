@@ -2,7 +2,7 @@ package gestionArray;
 /**
  * Classe de gestion d'un tableau de double
  * @author Corentin.P @InstantKarma0
- * @author Rodolphe
+ * @author Rodolphe.D @Rod-Gala
  *
  */
 public class GestionTbDouble {
@@ -11,13 +11,13 @@ public class GestionTbDouble {
 	 * Fonction permettant d'ajouter un double dans un tableau de double
 	 * 
 	 * @author Rodolphe
-	 * @param tb, le tableau o� faire l'ajout
+	 * @param tb, le tableau ou faire l'ajout
 	 * @param ajout, le double a ajouter
 	 * @return Un tableau avec le nouveau element en plus
 	 */
 	public static double[] push(double[] tb, double ajout) {
 		
-		// On d�fini un tableau ayant la taille de tb + 1
+		// On defini un tableau ayant la taille de tb + 1
 		double[] resultat = new double[tb.length+1];
 		
 		// On ajoute les elements de tb dans le nouveau tableau
@@ -64,7 +64,7 @@ public class GestionTbDouble {
 	/**
 	 * Fonction permettant de chercher une valeur dans un tableau et 
 	 * retourner son indice
-	 * Si le retour est egal � -1, la valeur n'a pas ete trouve
+	 * Si le retour est egal a -1, la valeur n'a pas ete trouve
 	 * 
 	 * @param tb, le tableau dans lequel chercher
 	 * @param value, la valeur a chercher
@@ -76,7 +76,7 @@ public class GestionTbDouble {
 		
 		// On parcours le tableau
 		for (int i = 0; i < tb.length; i++) {
-			// Dans le cas o� la valeur est dans le tableau
+			// Dans le cas ou la valeur est dans le tableau
 			if (tb[i] == value) {
 				// On recupere la valeur de l'indice
 				resultat = i;
@@ -101,13 +101,13 @@ public class GestionTbDouble {
 	 * @return
 	 */
 	public static double[] remove(double[]tb, double value) {
-		// On d�clare l'indice
+		// On declare l'indice
 		int indice;
 		
-		// On recup�re l'indice de la valeur
+		// On recupere l'indice de la valeur
 		indice = search(tb, value);
 		
-		// Dans le cas o� la valeur n'existe pas dans le tableau
+		// Dans le cas ou la valeur n'existe pas dans le tableau
 		if (indice == -1) {
 			// On renvoie le tableau non modifie
 			return tb;
@@ -129,9 +129,9 @@ public class GestionTbDouble {
 	 */
 	public static double[] merge(double[] tb, double[] tbajout) {
 		
-		// On d�fini un tableau ayant la taille de tb + taille de tbajout
+		// On defini un tableau ayant la taille de tb + taille de tbajout
 		double[] resultat = new double[tb.length + tbajout.length];
-		// On d�clare un nouveau indice
+		// On declare un nouveau indice
 		int i;
 		
 		// On ajoute les elements de tb dans le nouveau tableau
@@ -161,7 +161,7 @@ public class GestionTbDouble {
 		double[] resultat = new double[tableau.length-indiceDebut];
 		
 		/* On ajoute les valeurs du tableau d'origine depuis l'indice de debut
-		*  jusqu'� la fin du tableau d'origine dans le nouveau tableau
+		*  jusqu'a la fin du tableau d'origine dans le nouveau tableau
 		*/
 		for (int i = 0; i < resultat.length; i ++) {
 			resultat[i] = tableau[i+indiceDebut];
@@ -184,7 +184,7 @@ public class GestionTbDouble {
 		// On declare un nouveau tableau
 		double[] resultat = new double[indiceFin-indiceDebut];
 		
-		// On ajoute les elements du tableau d'origine depuis l'indice de debut jusqu'�
+		// On ajoute les elements du tableau d'origine depuis l'indice de debut jusqu'a
 		// l'indice de fin (exclus) dans le nouveau tableau
 		for(int i = 0; i < tableau.length; i ++) {
 			resultat[i] = tableau[indiceDebut+i];
@@ -199,7 +199,7 @@ public class GestionTbDouble {
 	 * Fonction permettant de renvoyer un tableau de tableau contenant
 	 * deux tableau resultant de la decoupe du tableau d'origine a l'indice fourni
 	 * @param tableau, Le tableau d'origine
-	 * @param indiceDecoupe, L'indice o� le tableau sera decoupe
+	 * @param indiceDecoupe, L'indice ou le tableau sera decoupe
 	 * @return Un tableau de tableaux de taille 2
 	 */
 	public static double[][] split(double[] tableau, int indiceDecoupe) {
@@ -208,7 +208,7 @@ public class GestionTbDouble {
 		// On initialise l'indice du tableau d'origine
 		int i;
 		
-		// On ajoute les elements du tableau d'origine jusqu'� l'indice de decoupe
+		// On ajoute les elements du tableau d'origine jusqu'a l'indice de decoupe
 		// (exclus) dans la premiere ligne du nouveau tableau
 		for (i = 0 ;i < indiceDecoupe; i++) {
 			resultat[0][i] = tableau[i];

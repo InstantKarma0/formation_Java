@@ -3,7 +3,7 @@ package gestionArray;
 /**
  * Classe de gestion d'un tableau de String
  * @author Corentin.P @InstantKarma0
- * @author Rodolphe
+ * @author Rodolphe.D @Rod-Gala
  *
  */
 public class GestionTbString {
@@ -12,13 +12,13 @@ public class GestionTbString {
 	 * Fonction permettant d'ajouter un String dans un tableau de String
 	 * 
 	 * @author Rodolphe
-	 * @param tb, le tableau o� faire l'ajout
+	 * @param tb, le tableau ou faire l'ajout
 	 * @param ajout, le String a ajouter
 	 * @return Un tableau avec le nouveau element en plus
 	 */
 	public static String[] push(String[] tb, String ajout) {
 		
-		// On d�fini un tableau ayant la taille de tb + 1
+		// On defini un tableau ayant la taille de tb + 1
 		String[] resultat = new String[tb.length+1];
 		
 		// On ajoute les elements de tb dans le nouveau tableau
@@ -65,7 +65,7 @@ public class GestionTbString {
 	/**
 	 * Fonction permettant de chercher une valeur dans un tableau et 
 	 * retourner son indice
-	 * Si le retour est egal � -1, la valeur n'a pas ete trouve
+	 * Si le retour est egal a -1, la valeur n'a pas ete trouve
 	 * 
 	 * @param tb, le tableau dans lequel chercher
 	 * @param value, la valeur a chercher
@@ -77,7 +77,7 @@ public class GestionTbString {
 		
 		// On parcours le tableau
 		for (int i = 0; i < tb.length; i++) {
-			// Dans le cas o� la valeur est dans le tableau
+			// Dans le cas ou la valeur est dans le tableau
 			if (tb[i] == value) {
 				// On recupere la valeur de l'indice
 				resultat = i;
@@ -102,13 +102,13 @@ public class GestionTbString {
 	 * @return
 	 */
 	public static String[] remove(String[]tb, String value) {
-		// On d�clare l'indice
+		// On declare l'indice
 		int indice;
 		
-		// On recup�re l'indice de la valeur
+		// On recupere l'indice de la valeur
 		indice = search(tb, value);
 		
-		// Dans le cas o� la valeur n'existe pas dans le tableau
+		// Dans le cas ou la valeur n'existe pas dans le tableau
 		if (indice == -1) {
 			// On renvoie le tableau non modifie
 			return tb;
@@ -129,9 +129,9 @@ public class GestionTbString {
 	 */
 	public static String[] merge(String[] tb, String[] tbajout) {
 		
-		// On d�fini un tableau ayant la taille de tb + taille de tbajout
+		// On defini un tableau ayant la taille de tb + taille de tbajout
 		String[] resultat = new String[tb.length + tbajout.length];
-		// On d�clare un nouveau indice
+		// On declare un nouveau indice
 		int i;
 		
 		// On ajoute les elements de tb dans le nouveau tableau
@@ -161,7 +161,7 @@ public class GestionTbString {
 		String[] resultat = new String[tableau.length-indiceDebut];
 		
 		/* On ajoute les valeurs du tableau d'origine depuis l'indice de debut
-		*  jusqu'� la fin du tableau d'origine dans le nouveau tableau
+		*  jusqu'a la fin du tableau d'origine dans le nouveau tableau
 		*/
 		for (int i = 0; i < resultat.length; i ++) {
 			resultat[i] = tableau[i+indiceDebut];
@@ -199,7 +199,7 @@ public class GestionTbString {
 	 * Fonction permettant de renvoyer un tableau de tableau contenant
 	 * deux tableau resultant de la decoupe du tableau d'origine a l'indice fourni
 	 * @param tableau, Le tableau d'origine
-	 * @param indiceDecoupe, L'indice o� le tableau sera decoupe
+	 * @param indiceDecoupe, L'indice ou le tableau sera decoupe
 	 * @return Un tableau de tableaux de taille 2
 	 */
 	public static String[][] split(String[] tableau, int indiceDecoupe) {
@@ -208,7 +208,7 @@ public class GestionTbString {
 		// On initialise l'indice du tableau d'origine
 		int i;
 		
-		// On ajoute les elements du tableau d'origine jusqu'� l'indice de decoupe
+		// On ajoute les elements du tableau d'origine jusqu'a l'indice de decoupe
 		// (exclus) dans la premiere ligne du nouveau tableau
 		for (i = 0 ;i < indiceDecoupe; i++) {
 			resultat[0][i] = tableau[i];
