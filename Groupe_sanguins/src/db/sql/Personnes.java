@@ -59,11 +59,11 @@ public class Personnes {
         do {
             System.out.print("Veuillez nous donner votre nom : ");
             nom = Saisie.next();
-        }while (!(nom.matches("^[A-Z][a-z������������$$-]{1,20}$"))); // Rege Broke cause of encoding
+        }while (!(nom.matches("^[A-Z][a-zàâäöôéèëêùïî-]{1,20}$"))); // Rege Broke cause of encoding
         do{
             System.out.print("Votre prenom : ");
             prenom = Saisie.next();
-        }while(!(prenom.matches("^[A-Z][a-z������������$$-]{1,20}$"))); // Rege Broke cause of encoding
+        }while(!(prenom.matches("^[A-Z][a-zàâäöôéèëêùïî-]{1,20}$"))); // Rege Broke cause of encoding
         do{
             System.out.print("Votre age :");
             try {
