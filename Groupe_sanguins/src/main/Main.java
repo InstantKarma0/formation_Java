@@ -11,7 +11,7 @@ public class Main {
 		int choix = -1;
 		do {
 		System.out.println("------------------MENU------------------");
-		System.out.println("1. S'ajouter à la base de données");
+		System.out.println("1. S'ajouter ï¿½ la base de donnï¿½es");
 		System.out.println("2. Savoir de quel groupe sanguin peut-on recevoir");
 		System.out.println("3. Savoir de quel groupe sanguin peut-on donner");
 			try{
@@ -20,7 +20,7 @@ public class Main {
 				System.out.println("Erreur de saisie veuillez entrer 1 ou 2");
 			}//EO try catch
 		}while(!(choix >= 1 && choix <=3));
-		//Affichage du menu et vérification de la saisie
+		//Affichage du menu et verification de la saisie
 
 		switch (choix){
 			case 1 :

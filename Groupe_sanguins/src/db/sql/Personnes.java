@@ -1,14 +1,19 @@
 package db.sql;
+/** 
+ * @Author Rodolphe.D @Rod-Gala
+ */
 
 import java.util.Arrays;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 import util.Logger;
 
+
+
 public class Personnes {
     static Scanner Saisie = new Scanner (System.in);
     /**
-     * Fonction permettant d'obtenir les personnes étant du groupe sanguin saisie par l'utilisateur 
+     * Fonction permettant d'obtenir les personnes etant du groupe sanguin saisie par l'utilisateur 
      * @param groupeName
      */
     public static String [][] searchGroupePersonneFromGroupeName (String groupeName){
@@ -29,7 +34,7 @@ public class Personnes {
     }//EO searchPersonneFromANDprenom
 
     /**
-     * Fonction permettant d'ajouter une nouvelles entrée dans la base de données
+     * Fonction permettant d'ajouter une nouvelles entree dans la base de donnees
      * @param nom
      * @param prenom
      * @param age
@@ -42,8 +47,8 @@ public class Personnes {
     }//EO addBDD
 
     /**
-     * Fonction permet de demander et de vérifier le prenom, le nom, l'age et le groupe sanguin de l'utilsateur avant de 
-     * les entrer dans la base de données
+     * Fonction permet de demander et de verifier le prenom, le nom, l'age et le groupe sanguin de l'utilsateur avant de 
+     * les entrer dans la base de donnees
      */
     public static void verifSaisieAddBDD (){
         String nom ;
@@ -54,11 +59,11 @@ public class Personnes {
         do {
             System.out.print("Veuillez nous donner votre nom : ");
             nom = Saisie.next();
-        }while (!(nom.matches("^[A-Z][a-zàâäöôéèëêùïî$$-]{1,20}$")));
+        }while (!(nom.matches("^[A-Z][a-zï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½$$-]{1,20}$"))); // Rege Broke cause of encoding
         do{
             System.out.print("Votre prenom : ");
             prenom = Saisie.next();
-        }while(!(prenom.matches("^[A-Z][a-zàâäöôéèëêùïî$$-]{1,20}$")));
+        }while(!(prenom.matches("^[A-Z][a-zï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½$$-]{1,20}$"))); // Rege Broke cause of encoding
         do{
             System.out.print("Votre age :");
             try {
@@ -78,7 +83,7 @@ public class Personnes {
         }while(!(groupeSanguin.matches("^[A][B][+|-]|[A|B|O][+|-]$")));
 
         if (addBDD(nom, prenom, age, groupeSanguin)) {
-        	System.out.println("Vous avez bien été enregistré dans la base de donnée.");
+        	System.out.println("Vous avez bien ï¿½tï¿½ enregistrï¿½ dans la base de donnï¿½e.");
         } else {
         	System.out.println("Une erreur est survenue, veuillez reessayer plus tard.");
         }
@@ -86,8 +91,8 @@ public class Personnes {
     }//EO verifSaisieAddBDD
 
     /**
-     * Fonction permettant de récuperer la liste des donneurs en fonction 
-     * d'un groupe danguin donner qui sera vérifié
+     * Fonction permettant de rï¿½cuperer la liste des donneurs en fonction 
+     * d'un groupe danguin donner qui sera vï¿½rifiï¿½
      */
     public static void getDonneurs(){
         String groupeSanguin ;
@@ -104,8 +109,8 @@ public class Personnes {
     }//EO getDonneurs
 
     /**
-     * Fonction permettant de récuperer la liste des receveurs en fonction 
-     * d'un groupe danguin donner qui sera vérifié
+     * Fonction permettant de rï¿½cuperer la liste des receveurs en fonction 
+     * d'un groupe danguin donner qui sera vï¿½rifiï¿½
      */
     public static void getReceveurs(){
         String groupeSanguin ;
@@ -122,7 +127,7 @@ public class Personnes {
     }//EO getReceveurs
 
     /**
-     * Fonction contenant la requete Sql permettant de récuperer les donneurs 
+     * Fonction contenant la requete Sql permettant de rï¿½cuperer les donneurs 
      * en fontion du nom du groupe sanguin
      * @param groupeSanguin
      * @return
@@ -135,7 +140,7 @@ public class Personnes {
     }//EO getDonneursFromGroupName
 
     /**
-     * Fonction contenant la requete Sql permettant de récuperer les receveurs
+     * Fonction contenant la requete Sql permettant de rï¿½cuperer les receveurs
      * en fontion du nom du groupe sanguin
      * @param groupeSanguin
      * @return

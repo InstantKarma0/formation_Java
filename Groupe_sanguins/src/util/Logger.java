@@ -16,7 +16,7 @@ public class Logger {
 	 * ------------------------------------------------------------------------
 	 */
 	private static String[] sqlSelect = {"select","*","from","where"," or "," and "};
-	private static String[] wordSelect = {"Selectionner", "tout les champs", "depuis la table", "où", " ou ", " et"};
+	private static String[] wordSelect = {"Selectionner", "tout les champs", "depuis la table", "oï¿½", " ou ", " et"};
 	private static String[] sqlInsert = {"insert", "into", "values"};
 	private static String[] wordInsert = {"Ajouter", "dans la table", "prenant comme valeur:"};
 	
@@ -45,7 +45,7 @@ public class Logger {
 	
 	/**
 	 * Fonction permettant de generer une ligne de log en fonction de la requete
-	 * sql et des arguments passés
+	 * sql et des arguments passes
 	 * @param sql La requette parametree SQL (avec les ?)
 	 * @param args Le tableau des parametres de la requete SQL
 	 */
@@ -54,7 +54,7 @@ public class Logger {
 		// on initialise un String contenant la requette sql sans '?'
 		String oSql = "SQL: " + replaceQuestionMark(sql, args);
 		// on initialise un String contenant les informations temporelles
-		// au moment où la fonction est utilisee
+		// au moment oï¿½ la fonction est utilisee
 		String date = Instant.now().atZone(ZoneId.of("Europe/Paris"))
 				.format(DateTimeFormatter.ISO_ZONED_DATE_TIME);
 		
@@ -129,7 +129,7 @@ public class Logger {
 	 */
 	private static String replaceAll(String str, String search,String subString) {
 		
-		// Boucle avec i allant de 0 à la taille de str - la taille de search
+		// Boucle avec i allant de 0 ï¿½ la taille de str - la taille de search
 		for (int i = 0; i < str.length()-(search.length());i ++) {
 			
 			// Si la portion du string str est egal a search
