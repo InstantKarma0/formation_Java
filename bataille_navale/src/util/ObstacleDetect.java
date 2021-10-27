@@ -5,11 +5,11 @@ public class ObstacleDetect {
 	
 	/**
 	 * Fonction appellant les 4 fonctions de detection en fonction des directions possibles
-	 * @param colonne -> Le numéro de la colonne
-	 * @param ligne -> Le numéro de la ligne = (int) ligne - 97
+	 * @param colonne -> Le numï¿½ro de la colonne
+	 * @param ligne -> Le numï¿½ro de la ligne = (int) ligne - 97
 	 * @param shipsize -> la taille du bateau actuel
 	 * @param shippos -> Tableau Multidimentionnel de taille 10x10 avec les emplacements pris par les bateaux
-	 * @param posibilities -> Tableau de taille 4 regroupant les direction possible reçu de la detection hors grille
+	 * @param posibilities -> Tableau de taille 4 regroupant les direction possible reï¿½u de la detection hors grille
 	 * @return posibilities -> Nouvelle affectation du tableau avec les direction apres detection colision
 	 * @throws Exception Tableau sans posibilitees
 	 */
@@ -32,19 +32,19 @@ public class ObstacleDetect {
 		return posibilities;
 	}
 	
-		// Débordement Gauche
+		// Dï¿½bordement Gauche
 		private static int leftDetect(int colonne, int ligne, int shipsize, int[][] shippos) {
 			
 			for (int i = colonne; i > colonne - shipsize; i--) {
 				if (shippos[ligne][i] != 0) {
-						return 0;
+					return 0;
 					
 				}
 			}
 			return 1;
 		}
 		
-		// Débordement Droite
+		// Dï¿½bordement Droite
 		private static int rightDetect(int colonne, int ligne, int shipsize, int[][] shippos) {
 			
 			for (int i = colonne; i < colonne + shipsize; i++) {
@@ -56,7 +56,7 @@ public class ObstacleDetect {
 			return 1;
 		}
 		
-		// Débordement Haut
+		// Dï¿½bordement Haut
 		private static int upDetect(int colonne,int ligne, int shipsize, int[][] shippos) {
 			for (int i = ligne; i > ligne - shipsize; i--) {
 				if (shippos[i][colonne] != 0) {
@@ -67,7 +67,7 @@ public class ObstacleDetect {
 			return 1;
 		}
 		
-		// Débordement Bas
+		// Dï¿½bordement Bas
 		private static int downDetect(int colonne,int ligne, int shipsize, int[][] shippos) {
 			for (int i = ligne; i < ligne + shipsize; i++) {
 				if (shippos[i][colonne] != 0) {

@@ -17,20 +17,22 @@ public class Main {
 		
 		
 		
-		long td = ExeTime.getTimeDebut();
+		// Create 2 instances of Player
 		Player J1 = new Player();
 		Player J2 = new Player();
-		Fenetre fun = new Fenetre(J1.getShipPos());
+		//Fenetre fun = new Fenetre(J1.getShipPos());
+
+		// Selecte the Game Mode
 		int mode = Pmode.select();
+		// If mode == 0 , J2 become a IA instance
 		if (mode == 0) {
 			J2 = new Ia();
 		}
-		 
+		
+
+		// Every Player setup their ships
 		J1.placement();
 		J2.placement();
-		
-		// TODO Controle de tir
-		// TODO Boucle avec condition victoire
 		
 		
 		int winner = -1;
@@ -59,8 +61,8 @@ public class Main {
 			int[] fireArray = current.fireAim();
 			int hit = other.checkfire(fireArray);
 			
-			if (hit == 1) { System.out.println("Touché!"); } else {
-			System.out.println("Raté!"); }
+			if (hit == 1) { System.out.println("Touchï¿½!"); } else {
+			System.out.println("Ratï¿½!"); }
 			// EO If
 			
 			current.addfirepos(fireArray, hit);
@@ -89,7 +91,7 @@ public class Main {
 			
 		} // EO While
 		
-		System.out.println("le joueur "+ (winner+1) + " a gagné en " + (turn/2) + " tours.");
+		System.out.println("le joueur "+ (winner+1) + " a gagnï¿½ en " + (turn/2) + " tours.");
 		
 		long tf = ExeTime.getTimeFin();
 		System.out.println(ExeTime.getExeTime(td, tf) + " ms");
